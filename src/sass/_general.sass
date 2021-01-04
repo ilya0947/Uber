@@ -1,0 +1,421 @@
+header
+	position: relative
+	height: 50px
+
+nav
+	position: fixed
+	width: 100%
+	height: 50px
+	background-color: #212121
+	z-index: 2
+.burger
+    display: none
+
+.menu
+	display: flex
+	justify-content: space-between
+	padding: 13px 70px
+	margin: 0
+	list-style-type: none
+		
+
+	&_link
+		color: $color_with
+		font-size: 15px
+		font-weight: 300
+
+	&_item
+		border-right: 2px dotted black
+		padding-right: 28px
+		&:nth-child(6)
+			padding: 0
+			border: none
+
+.subheader
+	position: absolute
+	padding-top: 16px
+	top: 50px
+	width: 100%
+	height: 84px
+	background-color: rgba(0, 0, 0, 0.6)
+
+	.subheader_logo
+		display: block
+		max-width: 100%
+		margin-top: 16px
+
+	&_official
+		margin-top: 6px
+		opacity: 0.5
+		color: $color_with
+		font-size: 13px
+		font-weight: 400
+
+	&_call
+		color: $color_with
+		font-size: 12px
+		font-weight: 300
+		margin-top: 3px
+		text-align: right
+
+	&_phone
+		display: block
+		margin-top: 8px
+		color: $color_with
+		font-size: 22px
+		font-weight: 400
+		text-transform: uppercase
+		text-align: right
+		line-height: 12px
+
+	&_btn
+		margin-top: 3px
+		width: 172px
+		height: 46px
+		font-size: 14px
+		font-weight: 400
+		text-transform: uppercase
+		+btn_hover
+
+.promo
+	min-height: 800px
+	background: url('../img/section_background/heder_screen.png') center (center / cover) no-repeat
+	padding: 150px 0 135px 0
+
+	&_header
+		color: $color_with
+		font-weight: 700
+		text-transform: uppercase
+		font-size: 60px
+		line-height: 60px
+		margin: 0
+		text-align: center
+
+	&_subheader
+		color: $color_with
+		font-weight: 700
+		text-transform: uppercase
+		font-size: 36px
+		line-height: 36px
+		margin: 0
+		margin-top: 22px
+		text-align: center
+
+	&_descr
+		color: $color_with
+		font-size: 18px
+		font-weight: 400
+		line-height: 24px
+		text-align: center
+		margin-top: 23px
+
+	&_btn
+		display: block
+		margin: 118px auto 0 auto
+		width: 259px
+		height: 63px
+		font-size: 18px
+		font-weight: 400
+		text-transform: uppercase
+		+btn_hover
+
+.advant
+	padding: 71px 0 65px 0
+
+	&_header
+		+label
+
+
+	&_h
+		+title
+
+	&_wrap
+		display: flex
+		justify-content: center
+		align-items: center
+		margin-top: 35px
+
+	&_icon
+		display: flex
+		justify-content: center
+		align-items: center
+		margin-right: 26px
+		width: 113px
+		height: 113px
+		background-color: $color_icon
+		border-radius: 100%
+
+	&_descr
+		width: 343px
+		color: $color_advant_descr
+		font-size: 15px
+		font-weight: 300
+		line-height: 21px
+
+		span
+			line-height: 21px
+			color: #1eacc7
+			font-size: 17px
+			font-weight: 400
+
+.mobile
+	min-height: 864px
+	background: url(../img/section_background/grid.png) center center/cover no-repeat
+	padding: 48px 0 79px 0
+	.row
+		margin-top: 32px
+	.label
+		+label
+	.title
+		+title
+	.subtitle
+		+subtitle
+	&_item
+		position: relative
+		width: 91%
+		height: 280px
+		margin: 0 auto
+		margin-bottom: 19px
+		padding-top: 91px
+		&_1
+			background: url(../img/mob_img/map_1.png) center center/cover no-repeat
+		&_2
+			background: url(../img/mob_img/map_2.png) center center/cover no-repeat
+		&_3
+			background: url(../img/mob_img/bax17-20_3.png) center center/cover no-repeat
+		&_4
+			background: url(../img/mob_img/bax17_4.png) center center/cover no-repeat
+		&_5
+			background: url(../img/mob_img/star_5.png) center center/cover no-repeat
+		&_6
+			background: url(../img/mob_img/cost_6.png) center center/cover no-repeat
+		&_subtitle
+			color: $color_with
+			font-family: Roboto
+			font-size: 24px
+			font-weight: 400
+			line-height: 31px
+			text-align: center
+			text-transform: uppercase
+		&_plus
+			position: absolute
+			bottom: 35px
+			left: 50%
+			transform: translateX(-50%)
+			width: 26px
+			height: 26px
+			background-color: #000000
+			border-radius: 100%
+			cursor: pointer
+			&::before
+				content: ""
+				display: block
+				position: absolute
+				right: 6px
+				bottom: 50%
+				transform: translateY(50%)
+				width: 14px
+				height: 2px
+				background-color: $color_icon
+				transition: 500ms all
+			&::after
+				content: ""
+				display: block
+				position: absolute
+				right: 50%
+				bottom: 6px
+				transform: translateX(50%)
+				width: 2px
+				height: 14px
+				background-color: $color_icon
+				transition: 300ms all
+			&:hover
+				&::after, &::before
+					background-color: $color_plus
+					
+
+.car
+	min-height: 899px
+	background: url(../img/section_background/mobile_screen.png) center center/cover no-repeat
+	padding: 57px 0 138px 0
+	.label
+		+label
+		color: #070716
+		background-color: $color_with 
+	.title
+		+title
+		color: $color_with
+		margin-top: 32px
+	.subtitle
+		+subtitle
+		color: $color_with
+	&_wrap
+		width: 68%
+		margin: 56px auto 0 auto
+	&_uber
+		width: 100%
+	&_foot
+		width: 297px
+		height: 42px
+		color: $color_black
+		font-size: 16px
+		font-weight: 300
+		line-height: 24px
+		text-align: center
+		margin: 4px auto 0 auto
+
+.require
+	padding: 68px 0 84px 0
+	.label
+		+label
+	.title
+		+title
+		margin: 33px auto 0 auto
+	&_block
+		margin: 33px 0
+		&_nmb
+			margin-bottom: 0px
+	&_title
+		color: $color_icon
+		font-size: 22px
+		font-weight: 400	
+	&_list
+		list-style-type: none
+		padding-left: 50px
+		margin-top: 22px
+		li
+			position: relative
+			color: #222222
+			font-size: 17px
+			font-weight: 300
+			line-height: 24px
+			text-align: left
+			margin-bottom: 10px
+			&::before
+				content: ""
+				display: block
+				position: absolute
+				left: -32px
+				top: 3px
+				width: 21px
+				height: 20px
+				background: url(../icons/jak_blue.svg) center center/cover no-repeat
+	&_descr
+		margin-top: 25px
+		font-size: 18px
+		font-weight: 300
+		line-height: 24px
+		color: $color_icon
+	.require_block_nmb
+		.require_title
+			color: $color_plus
+		.require_list
+			li
+				&::before
+					background: url(../icons/jac_red.svg) center center/cover no-repeat
+.world
+	min-height: 717px
+	background: url(../img/section_background/screen_footer.png) center center/cover no-repeat
+	padding: 49px 0
+	.label
+		+label
+		color: #070716
+		background-color: $color_with 
+	.title
+		+title
+		color: $color_with
+		margin-top: 32px
+	.subtitle
+		+subtitle
+		color: $color_with
+	&_city
+		display: block
+		height: 14px
+		margin: 486px auto 0 auto
+		color: $down_color
+		font-size: 15px
+		font-weight: 400
+		line-height: 14px
+		text-align: center
+		text-transform: uppercase
+		
+footer
+	padding: 14px 23px 31px
+	min-height: 156px
+	border-bottom: 8px solid #070716
+	a
+		&:hover
+			text-decoration: none
+.footer
+	&_line
+		width: 299px
+		height: 4px
+		background-color: $down_color
+		margin: 0 auto
+	&_wrap
+		display: flex
+		justify-content: space-between
+		align-items: flex-start
+	&_wrap > div
+		width: 33%
+		&:nth-child(3)
+			display: flex 
+			justify-content: flex-end
+	&_social
+		display: flex
+		flex-wrap: wrap 
+		margin-top: 29px
+		&_item 
+			display: flex 
+			justify-content: center
+			align-items: center
+			margin: 8px 4px 0 
+			width: 32px
+			height: 32px
+			background-color: #070716
+			border-radius: 100%
+		& > a >span
+			color: #ffffff
+	&_links
+		width: 100%
+		margin: 0 auto
+		&_msd
+			display: flex
+			justify-content: space-around
+			padding: 0 40px
+			margin-top: 32px
+			a
+				color: #070716
+				font-size: 15px
+				font-weight: 300
+				line-height: 19.1px
+				text-transform: uppercase
+		&_reng
+			display: flex
+			justify-content: space-around
+			padding: 0 40px
+			margin-top: 14px
+			a
+				color: #999999
+				font-size: 11px
+				font-weight: 300
+				line-height: 8px
+				text-transform: uppercase
+		&_lang
+			display: block
+			margin: 0 auto
+			margin-top: 15px
+			color: $down_color
+			font-size: 11px
+			font-weight: 400
+			line-height: 11.5px
+			text-align: center
+			text-transform: uppercase
+	&_store
+		text-align: right
+		margin-top: 28px
+		width: 100%
+	&_store > a > img
+		margin: 8px 0 0 2px
+.xs-visible
+        display: none
